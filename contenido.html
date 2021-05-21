@@ -456,7 +456,7 @@
                                     <img src="assets/img_2/transistor.png" alt="Transistor" class="img-fluid float-right" width="100px" style="position: absolute; right: 0; top: -40px; z-index: 10;">
                                 </div>
                                 <br><br>
-                                <div class="col-md-6 text-center">
+                                <div class="col-md-6 text-center"  style="margin-top: 20px;">
                                     <span class="titulo_azul">
                                         Transistor PNP
                                     </span>
@@ -469,7 +469,7 @@
                                     </div>
                                 </div>
                                 <br><br><br><br><br><br><br><br><br><br>
-                                <div class="col-md-6 text-center">
+                                <div class="col-md-6 text-center" style="margin-top: 20px;">
                                     <span class="titulo_azul">
                                         Transistor NPN
                                     </span>
@@ -508,20 +508,20 @@
                                        </p>
                                    </div>
                                    <div id="bjtAmbos" class="row tarjetaTransistoresBjt">
-                                       <div class="col-md-6 my-auto" style="text-align: center;">
+                                       <div class="col-md-6 my-auto" style="text-align: center; padding-top: 10px;">
                                             <div class="col-md-12 caja-color-y-claro" onclick="enableBjt('interruptor')">
                                                 <span class="font-weight-bold">Como interruptor</span>
                                                 <img src="assets/img_2/interruptor.png" alt="Interruptor" class="img-fluid">
                                             </div>
                                        </div>
-                                       <div class="col-md-6 my-auto" style="text-align: center;">
+                                       <div class="col-md-6 my-auto" style="text-align: center; padding-top: 10px;">
                                             <div class="col-md-12 caja-color-y-claro" onclick="enableBjt('amplificador')">
                                                 <span class="font-weight-bold">Como amplificador</span>
                                                 <img src="assets/img_2/amplificador.png" alt="Amplificador" class="img-fluid">
                                             </div>
                                        </div>
                                    </div>
-                                   <div id="bjtInterruptor" class="row tarjetaTransistoresBjt" style="display: none;">
+                                   <div id="bjtInterruptor" class="row tarjetaTransistoresBjt" style="display: none; ">
                                        <div class="col-md-10 my-auto" style="text-align: center;">
                                             <div class="col-md-12 caja-color-y-claro">
                                                 <div class="row">
@@ -548,7 +548,7 @@
                                                 </ul>
                                             </div>
                                        </div>
-                                       <div class="col-md-2 my-auto" style="text-align: center;">
+                                       <div class="col-md-2 my-auto" style="text-align: center; padding-top: 10px">
                                             <div class="col-md-12 caja-color-y-claro" onclick="enableBjt('amplificador')">
                                                 <span class="font-weight-bold" style="font-size: 8px;">Como amplificador</span>
                                                 <img src="assets/img_2/amplificador.png" alt="Amplificador" class="img-fluid">
@@ -557,7 +557,7 @@
                                    </div>
                                    <div id="bjtAmplificador" class="row tarjetaTransistoresBjt" style="display: none;">
                                         <div class="col-md-2 my-auto" style="text-align: center;">
-                                            <div class="col-md-12 caja-color-y-claro" onclick="enableBjt('interruptor')">
+                                            <div class="col-md-12 caja-color-y-claro" style="padding-top: 20px;" onclick="enableBjt('interruptor')">
                                                 <span class="font-weight-bold" style="font-size: 8px;">Como interruptor</span>
                                                 <img src="assets/img_2/interruptor.png" alt="Interruptor" class="img-fluid">
                                             </div>
@@ -652,9 +652,9 @@
                                         <img src="assets/img_2/fondoenergia.png" alt="Toma eléctrico" class="img-fluid">
                                     </div>
                                     <p class="justificado p_black caja-color-y-claro">                                        
-                                        Para lograr una mayor potencia de salida, el amplificador está polarizado con una fuente simple o doble y una serie de resistencias. Lo que se desea en la polarización es el establecimiento de una corriente de colector <span class="font-weight-bold">(ICQ)</span> y un voltaje de colector-emisor <span class="font-weight-bold">(VCEQ)</span>, comúnmente conocido como el punto Q, que es un nivel de CC tanto de corriente como de voltaje. 
+                                        Para lograr una mayor potencia de salida, el amplificador está polarizado con una fuente simple o doble y una serie de resistencias. Lo que se desea en la polarización es el establecimiento de una corriente de colector <span class="font-weight-bold">(ICQ)</span> y un voltaje de colector-emisor <span class="font-weight-bold">(VCEQ)</span>, comúnmente conocido como el punto <span class="font-weight-bold">Q</span>, que es un nivel de <span class="font-weight-bold">CC</span> tanto de corriente como de voltaje. 
                                         <br><br>
-                                        Este punto Q debe seleccionarse de manera óptima para que se obtenga la máxima señal de salida simétrica.
+                                        Este punto <span class="font-weight-bold">Q</span> debe seleccionarse de manera óptima para que se obtenga la máxima señal de salida simétrica.
                                     </p>
                                 </div>
                                 <div class="col-md-6">
@@ -753,7 +753,12 @@
                             <div class="row">
                                 <div class="col">
                                     <p>Arrastre cada elemento de la columna izquierda con su descripción correspondiente:</p>
+                                    
                                 </div>
+                                <div class="col" style="margin-bottom: 10px;">
+                                    <button onclick="validarResultado()" class="button-3d" >Validar Ejercicio</button>
+                                </div>
+                                
                             </div>
                             <div id="contentEmparejamiento">
                                 <div class="row">
@@ -895,7 +900,7 @@
                                 <span>
                                     Haz clic en el botón siguiente para ampliar la información del dispositivo SCR:
                                 </span>
-                                <div class="col-md-12">
+                                <div class="col-md-12" style="display: flex; justify-content: center;">
                                     <br>
                                     <div id="flat">
                                         <ul>
@@ -1127,8 +1132,8 @@
                                 </div>
                                 <div class="col-md-10">
                                     <div class="row">
-                                        <div class="col-md-6"  style="height: 200px;">
-                                            <div id="cardFront_1" class="card_animada card card-front float-right" data-numeroTarjeta="1">
+                                        <div class="col-md-6"  style="height: 200px; ">
+                                            <div id="cardFront_1" class="card_animada card card-front " data-numeroTarjeta="1">
                                                 <div class="card-body">
                                                     <div class="card-icon">
                                                         <img src="assets/img_2/tarjeta1.png" alt="Carga Regular" class="img-fluid">
@@ -1139,7 +1144,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div id="cardBack_1" class="card_animada card card-back card-flip float-right" data-numeroTarjeta="1">
+                                            <div id="cardBack_1" class="card_animada card card-back card-flip " data-numeroTarjeta="1">
                                                 <div class="card-body">
                                                     <p class="text-center p_white"><u>Carga regular (lento)</u></p>
                                                     <ul class="list-unstyled p_margin5">
@@ -1154,7 +1159,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-md-6"  style="height: 200px;">
+                                        <div class="col-md-6 ajuste"  style="height: 200px;">
                                             <div id="cardFront_2" class="card_animada card card-front" data-numeroTarjeta="2">
                                                 <div class="card-body">
                                                     <div class="card-icon">
@@ -1182,8 +1187,8 @@
                                     </div>
                                     <br>
                                     <div class="row">
-                                        <div class="col-md-6"  style="height: 200px;">
-                                            <div id="cardFront_3" class="card_animada card card-front float-right" data-numeroTarjeta="3">
+                                        <div class="col-md-6"  style="height: 200px; margin-top: 100px">
+                                            <div id="cardFront_3" class="card_animada card card-front " data-numeroTarjeta="3">
                                                 <div class="card-body">
                                                     <div class="card-icon">
                                                         <img src="assets/img_2/tarjeta3.png" alt="Carga Regular" class="img-fluid">
@@ -1194,7 +1199,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div id="cardBack_3" class="card_animada card card-back card-flip float-right" data-numeroTarjeta="3">
+                                            <div id="cardBack_3" class="card_animada card card-back card-flip " data-numeroTarjeta="3">
                                                 <div class="card-body">
                                                     <p class="text-center p_white"><u>dT / dt de carga del sistema</u></p>
                                                     <ul class="list-unstyled p_margin5">
@@ -1208,7 +1213,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-md-6"  style="height: 200px;">
+                                        <div class="col-md-6"  style="height: 200px; margin-top: 100px"">
                                             <div id="cardFront_4" class="card_animada card card-front" data-numeroTarjeta="4">
                                                 <div class="card-body">
                                                     <div class="card-icon">
@@ -1889,7 +1894,7 @@
                                         <p class="font13 text-center mp10 p_padding2" style="text-align: justify !important;">
                                             La aplicación del control de fase en control de iluminación mejoran su calidad y los controles instalados resultan en ahorro de energía significativos, Además, el sistema de control debe poder manejar la configuración inicial y no afectar el funcionamiento de otros dispositivos.
                                         </p>  <br><br>
-                                        <div class="actividadtruefalse">
+                                        <div class="actividadtruefalse"  style="margin-top: -40px;">
                                             <label><input type='radio' name='r3' tabindex='5' value="1"> <span>VERDADERO</span></label>
                                             <label><input type='radio' name='r3' tabindex='5' value="0"> <span>FALSO</span></label>
                                         </div>        
@@ -1900,7 +1905,7 @@
                                         <p class="font13 text-center mp10 p_padding2" style="text-align: justify !important;">
                                             La gran mayoría de las máquinas menos utilizadas en la industria son molinos, trituradoras, tamices, sistemas de bombeo, ventilación, etc., son accionadas por motores AC o en su defecto por motores AC y DC (motores universales). 
                                         </p>  <br>
-                                        <div class="actividadtruefalse">
+                                        <div class="actividadtruefalse" style="margin-top: 30px;">
                                             <label><input type='radio' name='r4' tabindex='5' value="1"> <span>VERDADERO</span></label>
                                             <label><input type='radio' name='r4' tabindex='5' value="0"> <span>FALSO</span></label>
                                         </div>        
@@ -2047,14 +2052,14 @@
                                                     </p>
                                                 </div>
                                                 <div class="col-md-6 my-auto">
-                                                    <button class="btn btn-warning">1. Es barato y sencillo de transformar tensión.
-                                                    </button>
+                                                    <p class="p_black">1. Es barato y sencillo de transformar tensión.
+                                                    </p>
                                                     <br><br>
-                                                    <button class="btn btn-warning">2. Puede transmitir grandes cantidades de energía a largas distancias.
-                                                    </button>
+                                                    <p class="p_black">2. Puede transmitir grandes cantidades de energía a largas distancias.
+                                                    </p>
                                                     <br><br>
-                                                    <button class="btn btn-warning">3. Tiene una disipación de fenómeno eléctricos no deseados.
-                                                    </button>
+                                                    <p class="p_black">3. Tiene una disipación de fenómeno eléctricos no deseados.
+                                                    </p>
                                                 </div>
                                             </div>                                            
                                         </div>

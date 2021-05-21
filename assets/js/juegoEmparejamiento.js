@@ -33,7 +33,8 @@ function init() {
             containment: '#contentEmparejamiento',
             stack: '#cardPile p',
             cursor: 'move',
-            revert: true
+            revert: false
+
         });
     }
 
@@ -43,6 +44,7 @@ function init() {
             accept: '#cardPile p',
             hoverClass: 'hovered',
             drop: handleCardDrop,
+            
             over: function(event, ui) {
                 ui.draggable.draggable('option','revert',false);
             },
