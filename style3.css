@@ -304,6 +304,14 @@ a.article:hover {
     width: 100%;
 }
 
+@media screen and (max-width: 700px) {
+    .imagen100{
+        width: 15rem;
+    }
+    
+
+}
+
 .titulo-unidad{
     text-align: center;
     background: #2c538e;
@@ -1215,15 +1223,6 @@ a.article:hover {
       opacity: 1;
       margin-left: 0;
    }
-}
-
-.{
-    width: 300px;
-    height: 300px;
-    background: #fafafa;
-    border-radius: 20px;
-    border: 10px solid transparent;
-    border-image: linear-gradient(to bottom, #3acfd5 0%, #3a4ed5 100%) 1;
 }
 
 .carrusel-flip{
@@ -2254,6 +2253,7 @@ Estilos de tarjetas interactivas.
 
 .divcontenido {
     margin-bottom: 100px;
+    overflow: auto;
     overflow-y: auto !important;
     height: calc( 100vh - 200px ) !important;
     overflow-x: hidden !important;
