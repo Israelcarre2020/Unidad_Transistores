@@ -13,7 +13,51 @@ $(document).ready(function () {
     init();
 });
 
+function init2() {
+    // Reset the game
+    $('#cardPile').html('');
+    $('#cardSlots').html('');
+
+    // Create the pile of shuffled cards
+    var columnaOrigen = [   
+                            'Transistor de corriente BJT',
+                            'Transistor NPN',
+                            'Mosfet de potencia',
+                            'Transistor IGBT'
+                        ];
+    var numbers = [1, 2, 3, 4];
+    numbers.sort(function () { return Math.random() - .5 });
+
+    for (var i = 0; i < numbers.length; i++) {
+        $('<p class="btn btn-warning boton-juego" style="width:100%">' + columnaOrigen[numbers[i]-1] + '</p>').data('number', numbers[i]).attr('id', 'cardEmparejamiento' + numbers[i]).appendTo('#cardPile').draggable({
+            containment: '#contentEmparejamiento',
+            stack: '#cardPile p',
+            cursor: 'move',
+            revert: false
+
+        });
+    }
+
+    // Create the card slots
+    for (var i = 1; i <= numbers.length; i++) {
+        $('<p class="btn btn-warning" style="width:100%">...</p>').data('number', i).appendTo('#cardSlots').droppable({
+            accept: '#cardPile p',
+            hoverClass: 'hovered',
+            drop: handleCardDrop,
+            
+            over: function(event, ui) {
+                ui.draggable.draggable('option','revert',false);
+            },
+            out: function(event, ui) {
+                ui.draggable.draggable('option','revert',true);
+            }
+        });
+    }
+}
+
 function init() {
+
+    intentosEmparejamiento = 0;
     // Reset the game
     $('#cardPile').html('');
     $('#cardSlots').html('');
@@ -109,13 +153,14 @@ function validarResultado(){
             )
             intentosEmparejamiento = 0;
             init();
-            goToActivities();
+            //goToActivities();
         } else {
             Swal.fire(
                 '¡Lo sentimos!',
                 'Puedes intentarlo de nuevo',
                 'error'
             )
+            init2();
         }
     }
 }
