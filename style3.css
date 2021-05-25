@@ -1115,10 +1115,24 @@ a.article:hover {
 }
 
 @media screen and (max-width: 700px) {
+
     .ajuste{
         margin-top: 100px;
     }
+
+
  }
+
+ @media screen and (max-width: 700px) {
+    
+
+
+.botonera a{
+    width: 30px !important;
+}
+
+ }
+
 
 .tablinks:hover p:before {
    opacity: 0.1;
@@ -1639,6 +1653,8 @@ picture img {
 .botonera{
   padding-bottom: 100px;
 }
+
+
 
 .botonera a{
     width: 70px;
