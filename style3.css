@@ -975,6 +975,9 @@ a.article:hover {
    }
 }
 
+.img-show{
+    width: 30px
+}
 /* Tab Links */
 
 .tablinks {
